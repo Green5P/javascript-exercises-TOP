@@ -10,6 +10,7 @@ const sumAll = function (firstNumber, lastNumber) {
   } else if (firstNumber % 1 != 0 || lastNumber % 1 != 0) {
     return "ERROR";
   } else if (
+    // Returns error if number in not a number parameter e.g '9', [4,5]
     typeof firstNumber !== "number" ||
     typeof lastNumber !== "number"
   ) {
