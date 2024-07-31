@@ -1,17 +1,21 @@
 const sumAll = function (firstNumber, lastNumber) {
   let result = 0;
-  if (firstNumber > lastNumber) {
-    for (let i = lastNumber; i <= firstNumber; i++) {
-      result += i;
-    }
-    return (sum = result);
+  if (firstNumber < 0 || lastNumber < 0) {
+    return "ERROR";
   } else {
-    for (let i = firstNumber; i <= lastNumber; i++) {
-      result += i;
+    if (firstNumber > lastNumber) {
+      for (let i = lastNumber; i <= firstNumber; i++) {
+        result += i;
+      }
+      return (sum = result);
+    } else {
+      for (let i = firstNumber; i <= lastNumber; i++) {
+        result += i;
+      }
     }
-  }
 
-  return (sum = result);
+    return (sum = result);
+  }
 };
 
 //
