@@ -1,8 +1,16 @@
-const sumAll = function (firstNumber, secondNumber) {
+const sumAll = function (firstNumber, lastNumber) {
   let result = 0;
-  for (let i = firstNumber; i <= secondNumber; i++) {
-    result += i;
+  if (firstNumber > lastNumber) {
+    for (let i = lastNumber; i <= firstNumber; i++) {
+      result += i;
+    }
+    return (sum = result);
+  } else {
+    for (let i = firstNumber; i <= lastNumber; i++) {
+      result += i;
+    }
   }
+
   return (sum = result);
 };
 
