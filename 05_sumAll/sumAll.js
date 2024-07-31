@@ -1,16 +1,20 @@
 const sumAll = function (firstNumber, lastNumber) {
   let result = 0;
+  // Returns error when number is negative
   if (firstNumber < 0 || lastNumber < 0) {
     return "ERROR";
+    // Returns error when number is not an integer
   } else if (firstNumber % 1 != 0 || lastNumber % 1 != 0) {
     return "ERROR";
   } else {
+    // Adds all numbers between two given numbers using a for loop if First number if greater than Last number.
     if (firstNumber > lastNumber) {
       for (let i = lastNumber; i <= firstNumber; i++) {
         result += i;
       }
       return (sum = result);
     } else {
+      // Adds all numbers between two given numbers using a for loop if First number if greater than Last number.
       for (let i = firstNumber; i <= lastNumber; i++) {
         result += i;
       }
