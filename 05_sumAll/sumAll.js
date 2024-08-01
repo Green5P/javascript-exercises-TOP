@@ -6,7 +6,7 @@ const sumAll = function (firstNumber, lastNumber) {
     return "ERROR";
     //
     //
-    // Returns error when number is not an integer
+    // Returns error when number is not an integer but a decimal...
   } else if (firstNumber % 1 != 0 || lastNumber % 1 != 0) {
     return "ERROR";
   } else if (
