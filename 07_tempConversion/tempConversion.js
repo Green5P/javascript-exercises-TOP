@@ -1,5 +1,10 @@
 const convertToCelsius = function (temperature) {
-  return (result = temperature - 32);
+  if (temperature === 32) {
+    return temperature - 32;
+  } else {
+    initialTemp = (temperature - 32) * (5 / 9);
+    return (result = Math.ceil(initialTemp * 10) / 10);
+  }
 };
 
 const convertToFahrenheit = function (temperature) {
