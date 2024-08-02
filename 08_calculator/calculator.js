@@ -9,9 +9,6 @@ const subtract = function (firstNumber, secondNumber) {
 };
 
 const sum = function (myArray) {
-  // if (myArray == []) {
-  //   return 0;
-  // }
   let sum = 0;
   for (let i = 0; i < myArray.length; i++) {
     sum += myArray[i];
@@ -19,7 +16,10 @@ const sum = function (myArray) {
   return sum;
 };
 
-const multiply = function () {};
+const multiply = function (firstNumber, secondNumber) {
+  let product = firstNumber * secondNumber;
+  return product;
+};
 
 const power = function () {};
 
