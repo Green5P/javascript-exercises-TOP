@@ -11,7 +11,7 @@ const convertToFahrenheit = function (temperature) {
   if (temperature === 0) {
     return temperature + 32;
   } else {
-    initialTemp = (temperature - 32) * (5 / 9);
+    initialTemp = temperature * (9 / 5) + 32;
     return (result = Math.ceil(initialTemp * 10) / 10);
   }
 };
