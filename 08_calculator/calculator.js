@@ -29,6 +29,7 @@ const power = function (number, power) {
   for (let i = 0; i <= power; i++) {
     result *= number;
   }
+  return result;
 };
 
 const factorial = function () {};
