@@ -13,7 +13,7 @@ const sum = function (myArray) {
   //   return 0;
   // }
   let sum = 0;
-  for (let i = 0; i < myArray.length - 1; i++) {
+  for (let i = 0; i < myArray.length; i++) {
     sum += myArray[i];
   }
   return sum;
