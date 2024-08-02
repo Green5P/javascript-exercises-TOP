@@ -3,7 +3,10 @@ const add = function (firstNumber, secondNumber) {
   return sum;
 };
 
-const subtract = function () {};
+const subtract = function (firstNumber, secondNumber) {
+  let diference = firstNumber - secondNumber;
+  return diference;
+};
 
 const sum = function () {};
 
