@@ -9,6 +9,10 @@ const subtract = function (firstNumber, secondNumber) {
 };
 
 const sum = function (myArray) {
+  // if (myArray == []) {
+  //   return 0;
+  // }
+  let sum = 0;
   for (let i = 0; i < myArray.length - 1; i++) {
     sum += myArray[i];
   }
