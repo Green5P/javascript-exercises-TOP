@@ -16,8 +16,11 @@ const sum = function (myArray) {
   return sum;
 };
 
-const multiply = function (firstNumber, secondNumber) {
-  let product = firstNumber * secondNumber;
+const multiply = function (myArray) {
+  let product = 1;
+  for (let i = 0; i < myArray.length; i++) {
+    product *= myArray[i];
+  }
   return product;
 };
 
