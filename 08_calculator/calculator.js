@@ -33,8 +33,14 @@ const power = function (number, power) {
 };
 
 const factorial = function (number) {
+  let myArray = [];
   if (number == 0 || number == 1) {
     return 1;
+  } else {
+    for (let i = 1; i < number; i++) {
+      myArray[i] = number;
+      number -= number;
+    }
   }
 };
 
