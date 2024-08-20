@@ -1,20 +1,37 @@
 const palindromes = function (myString) {
   const myReg = /[a-zA-Z]/g;
-  if (
-    myReg.test(
-      myString[myString.length - 1]
-    ) /* myReg.test(char) is used to check if char is the regular expression 'myReg' */ &&
-    myString.toUpperCase()[0] === myString.toUpperCase()[myString.length - 1] // Compares if the last character in the string is thesame as the first.
-  ) {
-    return true;
-  } else if (
-    myReg.test(!myString[myString.length - 1]) &&
-    myString.toUpperCase()[0] === myString.toUpperCase()[myString.length - 2] // Compares if the last character in the string is thesame as the first.
-  ) {
-    return true;
-  } else {
-    return false;
+  //
+  trimS = myString.trim();
+
+  // Gets the Midpoint of each string.
+  if (trimS % 2 == 1) {
+    center = (trimS.length - 1) / 2;
+    firstPart = trimS.slice(0, center);
+    secondPart = trimS.slice(center);
+    for (let i = 0; i < center; i++) {
+      if (firstPart[i] === secondPart[secondPart.length() - (i + 1)]) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
+  //
+  else if (trimS % 2 == 0) {
+    center = (trimS.length - 2) / 2;
+    firstPart = trimS.slice(0, center);
+    secondPart = trimS.slice(center);
+    for (let i = 0; i < center; i++) {
+      if (firstPart[i] === secondPart[secondPart.length() - (i + 1)]) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  // Tests if all characters of the string are alphabets
+  // myReg.test(!myString[myString.length - (i + 1)]);
 };
 
 // Do not edit below this line
