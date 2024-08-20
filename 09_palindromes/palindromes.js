@@ -1,37 +1,46 @@
 const palindromes = function (myString) {
   const myReg = /[a-zA-Z]/g;
+  let result = 0;
   //
-  trimS = myString.trim();
+  trimS = myString.trim().toUpperCase();
+  trimmedS = trimS.length;
 
   // Gets the Midpoint of each string.
-  if (trimS % 2 == 1) {
+  if (trimmedS % 2 == 1) {
     center = (trimS.length - 1) / 2;
-    firstPart = trimS.slice(0, center);
-    secondPart = trimS.slice(center);
+    firstPart = myReg.test(!trimS.slice(0, center));
+    secondPart = myReg.test(!trimS.slice(center));
     for (let i = 0; i < center; i++) {
-      if (firstPart[i] === secondPart[secondPart.length() - (i + 1)]) {
-        return true;
+      if (firstPart[i] === secondPart[secondPart.length - (i + 1)]) {
+        result += 1;
       } else {
-        return false;
+        result = 0;
       }
+    }
+    if (result >= 1) {
+      return true;
     }
   }
   //
-  else if (trimS % 2 == 0) {
+  else if (trimmedS % 2 == 0) {
     center = (trimS.length - 2) / 2;
-    firstPart = trimS.slice(0, center);
-    secondPart = trimS.slice(center);
+    //
+    // Tests if all characters of the string are alphabets
+    // myReg.test(!****);
+    //
+    firstPart = myReg.test(!trimS.slice(0, center));
+    secondPart = myReg.test(!trimS.slice(center));
     for (let i = 0; i < center; i++) {
-      if (firstPart[i] === secondPart[secondPart.length() - (i + 1)]) {
-        return true;
+      if (firstPart[i] === secondPart[secondPart.length - (i + 1)]) {
+        result += 1;
       } else {
-        return false;
+        result = 0;
       }
     }
+    if (result >= 1) {
+      return true;
+    }
   }
-
-  // Tests if all characters of the string are alphabets
-  // myReg.test(!myString[myString.length - (i + 1)]);
 };
 
 // Do not edit below this line
